@@ -62,7 +62,6 @@ class ConController < ApplicationController
 		redirect_to :controller => 'con', :action => 'index'
 	end
   end
-
   def refresh
   	begin
   		@con_id = params[:id]
