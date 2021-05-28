@@ -1,0 +1,14 @@
+<br>
+
+	<% @ff.each do |f| %>
+		<% f.each do |z| %>
+			<% if z[0] == 'id' %>
+			
+				
+						<%= 'Your customer ID is '+z[1]%>
+
+			<% end %>
+			
+		<% end %>
+	<%	end %>
+

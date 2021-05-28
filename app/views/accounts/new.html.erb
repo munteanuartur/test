@@ -1,0 +1,27 @@
+<br>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>ConectionID</th>
+    <th>Name</th>
+    <th>Nature</th>
+    <th>Balance</th>
+    <th>Curency</th>
+    <th>Tranzactions</th>
+  </tr>
+<% @array.each do |ar|%>
+	<% ar.each do |final|%>
+      
+    <%if final['connection_id'] == @conect_id %>
+
+	<tr> <td><%= final['id']%></td><td><%= final['connection_id']%></td><td><%= final['name']%></td><td><%= final['nature']%></td><td><%= final['balance']%></td><td><%= final['currency_code']%></td><td><%= link_to 'View', tranzaction_show_path(con_id: final['connection_id'], acc_id: final['id'])%> </td></tr>
+    <%end%>
+
+	<%end%>
+<%end%>
+</table>

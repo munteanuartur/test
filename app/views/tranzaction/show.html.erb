@@ -1,0 +1,20 @@
+<br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Account ID</th>
+    <th>Status</th>
+    <th>Made On</th>
+    <th>Amount</th>
+    <th>Currency Code</th>
+  </tr>
+<% @f.each do |ff|%>	
+	<tr> <td><%= ff['id']%></td><td><%= ff['account_id']%></td><td><%= ff['status']%></td><td><%= ff['made_on']%></td><td><%= ff['amount']%></td><td><%= ff['currency_code']%></td></tr>    	
+<%end%>
+</table>
