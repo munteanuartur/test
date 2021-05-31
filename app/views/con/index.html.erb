@@ -10,6 +10,7 @@ table, th, td {
     <th>Provider Name</th>
     <th>Customer ID</th>
     <th>Updated at</th>
+    <th>Country Code</th>
     <th>Status</th>
     <th>Accounts</th>
     <th>Actions</th>
@@ -17,7 +18,7 @@ table, th, td {
   </tr>
 
 <% @ff.each do |f| %>
-	<tr> <td><%= f['id']%></td><td><%=f['provider_name']%></td><td><%= f['customer_id']%></td><td><%= f['updated_at']%></td><td><%=f['status']%></td><td> <%= link_to 'Acounts', account_path(id: f['id'])%></td><td>
+	<tr> <td><%= f['id']%></td><td><%=f['provider_name']%></td><td><%= f['customer_id']%></td><td><%= f['updated_at']%></td><td><%= f['country_code']%></td><td><%=f['status']%></td><td> <%= link_to 'Acounts', account_path(id: f['id'])%></td><td>
 		<%= link_to 'Delete', con_delete_path(id: f['id'])%> | <%= link_to 'Reconnect', con_reconect_path(id: f['id'], r: f['customer_id'])%> | <%= link_to 'Refresh', con_refresh_path(id: f['id'])%>
 	</td></tr>
 
