@@ -1,6 +1,8 @@
 class AccountsController < ApplicationController
-	$appid = Rails.application.credentials.dig(:appid)
-	$secret = Rails.application.credentials.dig(:secret)
+	#$appid = Rails.application.credentials.dig(:appid)
+	#$secret = Rails.application.credentials.dig(:secret)
+	$appid = "uBtTDa79PwtiBQ0EtXX72iyyeou5Fx3Ss8oX9ljGhR4"
+	$secret = "gWOZgOIyc7CMWVI5xzuPstcQNRgaBSAzhIbFILrBjgI"
 	before_action :authenticate_user!
 	def new
 		url_customer_id = 'https://www.saltedge.com/api/v5/customers'
